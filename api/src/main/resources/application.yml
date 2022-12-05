@@ -1,0 +1,16 @@
+spring:
+  data:
+    cassandra:
+      keyspace-name: gyunny_local
+      contact-points: localhost:9042
+      local-datacenter: dc1
+      schema-action: none
+      request:
+        consistency: ONE
+        timeout: 2s
+      connection:
+        connect-timeout: 5s
+
+logging:
+  level:
+    org.springframework.data.cassandra.core.cql.CqlTemplate: DEBUG
